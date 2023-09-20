@@ -4,4 +4,4 @@ PDF版 https://Miyjy.github.io/LLM/1/大規模言語処理モデルGPT-4_LLMに�
 
 Reveal.js slides HTML版 https://Miyjy.github.io/LLM/1/index.html
 
-ページ指定 https://Miyjy.github.io/LLM/1/index_reveal.html
+ページ指定 https://Miyjy.github.io/LLM/1/reveal.js-master/index_reveal.html  
