@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+ <!-- option -->
+        <link rel="stylesheet" href="workflows/CONTRIBUTING.md"> 
+        <link rel="stylesheet" href="workflows/FUNDING.yml"> 
+    
+        <link rel="stylesheet" href="css/print/paper.scss"> 
+        <link rel="stylesheet" href="css/print/pdf.scss"> 
+        <link rel="stylesheet" href="css/layout.scss"> 
+        <link rel="stylesheet" href="css/reveal.scss"> 
+    
+        <!-- <link rel="stylesheet" href="css/theme/source/serif.scss"> 
+        <link rel="stylesheet" href="css/theme/template/mixins.scss">  -->
+    
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css"> 
+        <link rel="stylesheet" href="dist/reveal.esm.js"> 
+        <link rel="stylesheet" href="dist/reveal.esm.js.map"> 
+        <link rel="stylesheet" href="dist/reveal.js"> 
+        <link rel="stylesheet" href="dist/reveal.js.map"> 
+    
+        <link rel="stylesheet" href="dist/theme/serif.css">
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/">  
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/league-gothic.css"> 
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/league-gothic.eot"> 
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/league-gothic.ttf"> 
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/league-gothic.woff"> 
+        <link rel="stylesheet" href="dist/theme/fonts/league-gothic/LICENSE"> 
+    
+        <link rel="stylesheet" href="js/config.js"> 
+        <link rel="stylesheet" href="package.json"> 
+        <link rel="stylesheet" href="index_slices_reveal.js.pdf"> 
+        <link rel="stylesheet" href="gulpfile.js"> 
+        <link rel="stylesheet" href="package-lock.json"> 
+        <link rel="stylesheet" href="js/components/playback.js"> 
+        <link rel="stylesheet" href="js/index.js"> 
+        <link rel="stylesheet" href="js/reveal.js"> 
+        <link rel="stylesheet" href="js/controllers/plugins.js"> 
+        <link rel="stylesheet" href="js/controllers/print.js"> 
+        <link rel="stylesheet" href="js/controllers/progress.js"> 
+        <link rel="stylesheet" href="js/controllers/slidenumber.js"> 
+    
+        <link rel="stylesheet" href="js/utils/device.js"> 
+        <link rel="stylesheet" href="js/utils/loader.js"> 
+    
+        <link rel="stylesheet" href="plugin/markdown/markdown.esm.js"> 
+        <link rel="stylesheet" href="plugin/markdown/markdown.js"> 
+        <link rel="stylesheet" href="plugin/markdown/plugin.js"> 
+    
+        <link rel="stylesheet" href="plugin/notes/notes.esm.js"> 
+        <link rel="stylesheet" href="plugin/notes/notes.js"> 
+        <link rel="stylesheet" href="plugin/notes/plugin.js"> 
+        <link rel="stylesheet" href="plugin/notes/speaker-view.html"> 
+    
+        <link rel="stylesheet" href="plugin/zoom/plugin.js"> 
+        <link rel="stylesheet" href="plugin/zoom/zoom.esm.js"> 
+        <link rel="stylesheet" href="plugin/zoom/zoom.js"> 
+        <!-- option -->
+
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+  <title>Electrophysiology_Neurons_Signals</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<section id="electrophysiology-analysis-in-python" class="cell markdown" id="ouaVdLQDMq12">
+<h1>Electrophysiology analysis in Python</h1>
+</section>
+<section id="electrophysiology-analysis-with-matplot" class="cell markdown" id="0ZcqpXHNN3q7">
+<h1>Electrophysiology analysis with Matplot</h1>
+</section>
+<div class="cell markdown" id="1WVEXnJuMNSy">
+<p>Electrophysiology analysis in Python involves processing and analyzing electrical signals recorded from biological tissues, such as neurons or muscles.</p>
+<p>Python is a versatile programming language with numerous libraries and tools for signal processing and data analysis.</p>
+<p>Here's a step-by-step guide to getting started with electrophysiology analysis using Python:</p>
+</div>
+<section id="install-python-and-required-libraries" class="cell markdown" id="EW-5iZRPY3O0">
+<h2>Install Python and Required Libraries:</h2>
+<p>Ensure you have Python installed on your system.</p>
+<p>It's recommended to use Anaconda or Miniconda for Python distribution management.</p>
+<p>You'll need to install some libraries, including NumPy, SciPy, Matplotlib, and Jupyter Notebook (for interactive analysis).</p>
+<p>You can install them using pip or conda, depending on your setup.</p>
+</section>
+<div class="cell code" id="3OFgXuRnL_gl">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="op">!</span>pip install numpy scipy matplotlib jupyter</span></code></pre></div>
+</div>
+<section id="data-acquisition" class="cell markdown" id="hNL3EBA0M2UW">
+<h2>Data Acquisition:</h2>
+<p>Obtain your electrophysiological data using appropriate hardware and software. Common data formats include Axon Binary File (ABF), NeuroData Without Borders (NWB), and plain text files.</p>
+</section>
+<section id="data-loading" class="cell markdown" id="Ug5eHtJTM6AB">
+<h2>Data Loading:</h2>
+<p>Depending on your data format, you'll need to write code to load the data into Python. Libraries like pyabf (for ABF files) or h5py (for NWB files) can help you with this task.</p>
+</section>
+<section id="data-preprocessing" class="cell markdown" id="bfr1VDGKM594">
+<h2>Data Preprocessing:</h2>
+<p>Clean and preprocess your data as needed. This may involve filtering, spike detection, baseline correction, or resampling, depending on the nature of your data.</p>
+</section>
+<section id="data-visualization" class="cell markdown" id="idaRjzf1M57D">
+<h2>Data Visualization:</h2>
+<p>Use Matplotlib or other visualization libraries to create plots and visualizations of your data. Common plots include time series plots, spike raster plots, and spectrograms.</p>
+</section>
+<section id="feature-extraction" class="cell markdown" id="4MAE5SYQM54C">
+<h2>Feature Extraction:</h2>
+<p>Extract relevant features from your electrophysiological data. Features may include spike frequency, amplitude, duration, or other characteristics specific to your analysis.</p>
+</section>
+<section id="statistical-analysis" class="cell markdown" id="JqeBqPxfM51L">
+<h2>Statistical Analysis:</h2>
+<p>Perform statistical analyses to compare groups or conditions, calculate correlations, or assess the significance of differences in your data. Libraries like SciPy can help with statistical tests.</p>
+</section>
+<section id="machine-learning-optional" class="cell markdown" id="ReufJIVtM5xt">
+<h2>Machine Learning (Optional):</h2>
+<p>If you have a large dataset or want to perform more complex analyses, consider using machine learning libraries like scikit-learn or TensorFlow for classification, clustering, or regression tasks.</p>
+</section>
+<section id="reporting-and-visualization" class="cell markdown" id="dduqeHAvM5sN">
+<h2>Reporting and Visualization:</h2>
+<p>Use Jupyter Notebooks or a similar tool to document your analysis step by step. Include explanations, code, and visualizations to present your findings effectively.</p>
+</section>
+<section id="additional-tools" class="cell markdown" id="pAhFZZS-M5kP">
+<h2>Additional Tools:</h2>
+<p>Depending on your specific analysis needs, you may want to explore domain-specific Python libraries like neo for electrophysiology data handling or elephant for spike train analysis.</p>
+</section>
+<div class="cell markdown" id="TOZB6yE4M5U4">
+<p>Here's a simple example of how you might load and visualize electrophysiological data in Python using Matplotlib:</p>
+</div>
+<div class="cell code" id="gwvPvfrfMicu">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a><span class="co"># Load your electrophysiological data (replace with your actual data loading code)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>data <span class="op">=</span> np.loadtxt(<span class="st">&quot;electrophysiology_data.txt&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a><span class="co"># Create a time vector (assuming your data has a regular time interval)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>time <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="bu">len</span>(data)) <span class="op">*</span> <span class="fl">0.001</span>  <span class="co"># Assuming a 1 kHz sampling rate</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a><span class="co"># Create a time series plot</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>plt.plot(time, data)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a>plt.xlabel(<span class="st">&quot;Time (s)&quot;</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>plt.ylabel(<span class="st">&quot;Voltage (mV)&quot;</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>plt.title(<span class="st">&quot;Electrophysiological Data&quot;</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>plt.show()</span></code></pre></div>
+</div>
+<section id="electrophysiology-analysis-with-wb" class="cell markdown" id="rRVwwi3xNuuZ">
+<h1>Electrophysiology analysis with W&amp;B</h1>
+</section>
+<div class="cell markdown" id="_qvyk0huNoRC">
+<p>W&amp;B, short for Weights &amp; Biases, is a popular tool in the machine learning and data science community for experiment tracking, visualization, and collaboration. While it's not specifically designed for electrophysiology analysis, it can still be a valuable addition to your workflow, especially if you're using machine learning techniques or conducting experiments where tracking and sharing results are important. Here's how you can use W&amp;B in the context of electrophysiology analysis:</p>
+<p>Installation: Start by installing the W&amp;B Python library:</p>
+</div>
+<div class="cell code" id="AHcIV5ivN9qf">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="op">!</span>pip install wandb</span></code></pre></div>
+</div>
+<section id="initialization" class="cell markdown" id="bgSQnq0yOBs-">
+<h2>Initialization:</h2>
+<p>Import and initialize W&amp;B in your Python script or Jupyter Notebook:</p>
+</section>
+<div class="cell code" id="gVrVUyEPN-gt">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="im">import</span> wandb</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>wandb.init(project<span class="op">=</span><span class="st">&quot;electrophysiology-analysis&quot;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown" id="D_poEmyxOGFh">
+<p>This will create a new project in your W&amp;B workspace for your electrophysiology analysis.</p>
+</div>
+<section id="logging-experiments" class="cell markdown" id="qdXUxzpYOI2z">
+<h2>Logging Experiments:</h2>
+<p>You can use W&amp;B to log various aspects of your experiments, such as hyperparameters, data preprocessing steps, and model architectures. For example:</p>
+</section>
+<div class="cell code" id="sq5aYhxNN-dA">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co"># Log hyperparameters</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>wandb.config.learning_rate <span class="op">=</span> <span class="fl">0.001</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>wandb.config.batch_size <span class="op">=</span> <span class="dv">32</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a><span class="co"># Log data preprocessing steps</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>wandb.log({<span class="st">&quot;data_preprocessing&quot;</span>: <span class="st">&quot;Spike detection and filtering&quot;</span>})</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a><span class="co"># Log model architecture</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a>wandb.watch(model)</span></code></pre></div>
+</div>
+<section id="logging-metrics-and-visualizations" class="cell markdown" id="QqArq5AbOMix">
+<h2>Logging Metrics and Visualizations:</h2>
+<p>As you perform your electrophysiology analysis, log relevant metrics, and visualizations. For instance:</p>
+</section>
+<div class="cell code" id="s3JAmwvWN-ar">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true"></a><span class="co"># Log metrics</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true"></a>wandb.log({<span class="st">&quot;accuracy&quot;</span>: <span class="fl">0.92</span>, <span class="st">&quot;loss&quot;</span>: <span class="fl">0.15</span>})</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true"></a><span class="co"># Log visualizations (e.g., Matplotlib plots)</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true"></a>ax.plot(time, data)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true"></a>wandb.log({<span class="st">&quot;example_plot&quot;</span>: fig})</span></code></pre></div>
+</div>
+<section id="sharing-and-collaboration" class="cell markdown" id="5gBCes2bOSYr">
+<h2>Sharing and Collaboration:</h2>
+<p>W&amp;B allows you to easily share your experiment results and collaborate with others. You can share a link to your project or invite team members to collaborate.</p>
+</section>
+<section id="experiment-comparison" class="cell markdown" id="FigizEoAOVHL">
+<h2>Experiment Comparison:</h2>
+<p>W&amp;B provides tools for comparing and visualizing different experiments, making it easier to understand how changes in your analysis pipeline impact the results.</p>
+</section>
+<section id="artifact-tracking" class="cell markdown" id="-QwpEKQKOW4P">
+<h2>Artifact Tracking:</h2>
+<p>If you need to associate artifacts (e.g., raw data files) with your experiments, W&amp;B can help with that as well.</p>
+</section>
+<section id="integration-with-machine-learning-frameworks" class="cell markdown" id="hVeXe0PaOYbh">
+<h2>Integration with Machine Learning Frameworks:</h2>
+<p>If you're using machine learning libraries like TensorFlow or PyTorch, W&amp;B provides integrations that allow you to track model training and evaluation in real-time.</p>
+</section>
+<div class="cell markdown" id="GjVYMb0NOZ8k">
+<p>Remember that while W&amp;B is a powerful tool for tracking and visualizing experiments, it's just one part of your electrophysiology analysis workflow. You will still need to use domain-specific tools and libraries to perform the actual data processing and analysis. W&amp;B complements these tools by helping you keep track of your experiments, share your findings, and collaborate with others.</p>
+</div>
+<section id="weights--biases-wb-for-neural-signals-analysis" class="cell markdown" id="fDvxn94dOdKb">
+<h1>Weights &amp; Biases (W&amp;B) for neural signals analysis</h1>
+<p>In using Weights &amp; Biases (W&amp;B) for projects involving neural signals, which is a subset of electrophysiology. While W&amp;B is not a specialized tool for electrophysiology, you can certainly use it to manage and track your experiments and data analysis in the context of neural signal processing projects. Here's how you can adapt W&amp;B for such projects:</p>
+</section>
+<section id="installation-and-initialization" class="cell markdown" id="5fvxsP7TOe9m">
+<h2>Installation and Initialization:</h2>
+<p>Start by installing the W&amp;B Python library as mentioned earlier. Then initialize W&amp;B in your Python script or Jupyter Notebook for your neural signal analysis project:</p>
+</section>
+<div class="cell code" id="Hea8AUHnN-Yg">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true"></a><span class="im">import</span> wandb</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true"></a>wandb.init(project<span class="op">=</span><span class="st">&quot;neural-signal-analysis&quot;</span>)</span></code></pre></div>
+</div>
+<section id="logging-and-experiment-tracking" class="cell markdown" id="tsu3My9DOiFD">
+<h2>Logging and Experiment Tracking:</h2>
+<p>Similar to what was mentioned earlier, you can use W&amp;B to log various aspects of your neural signal analysis experiments. This includes hyperparameters, data preprocessing steps, and algorithm configurations. For example:</p>
+</section>
+<div class="cell code" id="7YI10Sm3N-WG">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true"></a><span class="co"># Log hyperparameters</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true"></a>wandb.config.learning_rate <span class="op">=</span> <span class="fl">0.001</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true"></a>wandb.config.model_architecture <span class="op">=</span> <span class="st">&quot;LSTM&quot;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true"></a><span class="co"># Log data preprocessing steps</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true"></a>wandb.log({<span class="st">&quot;data_preprocessing&quot;</span>: <span class="st">&quot;Spike sorting and filtering&quot;</span>})</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true"></a><span class="co"># Log metrics and visualizations</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true"></a>wandb.log({<span class="st">&quot;accuracy&quot;</span>: <span class="fl">0.92</span>, <span class="st">&quot;loss&quot;</span>: <span class="fl">0.15</span>})</span></code></pre></div>
+</div>
+<section id="sharing-and-collaboration" class="cell markdown" id="qDsynfa1On0j">
+<h2>Sharing and Collaboration:</h2>
+<p>W&amp;B facilitates sharing and collaboration on your neural signal analysis projects. You can share your project with colleagues or collaborators and provide them with access to your experiment logs, results, and visualizations.</p>
+</section>
+<section id="experiment-comparison-and-visualization" class="cell markdown" id="IHVqX-mjOp2e">
+<h2>Experiment Comparison and Visualization:</h2>
+<p>W&amp;B offers tools for comparing experiments, which can be valuable for analyzing the impact of different preprocessing steps, algorithms, or parameter settings on your neural signal data.</p>
+</section>
+<section id="artifact-tracking" class="cell markdown" id="Y53qCVpDOrxL">
+<h2>Artifact Tracking:</h2>
+<p>If you need to associate raw neural signal data files or other artifacts with your experiments, you can use W&amp;B to track these artifacts and link them to specific experiments.</p>
+</section>
+<section id="integration-with-machine-learning-frameworks" class="cell markdown" id="xKAH6tNrOtaB">
+<h2>Integration with Machine Learning Frameworks:</h2>
+<p>If your neural signal analysis involves machine learning models or deep learning, W&amp;B provides integrations with popular libraries like TensorFlow and PyTorch to track model training and evaluation metrics.</p>
+</section>
+<section id="documentation-and-collaboration" class="cell markdown" id="46K5vG1YOvQ9">
+<h2>Documentation and Collaboration:</h2>
+<p>You can use W&amp;B's documentation capabilities to add notes, comments, and explanations to your experiments, making it easier to collaborate with others and document your findings.</p>
+</section>
+<div class="cell markdown" id="s6NpwunLOwwa">
+<p>Remember that while W&amp;B is a versatile tool for experiment tracking and collaboration, the core analysis of neural signal data may still require specialized Python libraries and techniques tailored to neurophysiology, such as spike sorting, neural feature extraction, and statistical analysis of neural activity. W&amp;B complements these efforts by helping you manage and share the results of your analysis.</p>
+</div>
+<section id="datasets-for-electrophysiology-and-neural-signal-analysis" class="cell markdown" id="2_bT83AZO97s">
+<h1>Datasets for electrophysiology and neural signal analysis</h1>
+<p>There are several popular datasets in the field of electrophysiology and neural signal analysis that researchers often use for various purposes, including the development and validation of algorithms, understanding brain function, and studying neural disorders. Here are some notable datasets:</p>
+</section>
+<section id="neurodata-without-borders-nwb" class="cell markdown" id="t5G-nRnRPGux">
+<h2>Neurodata Without Borders (NWB):</h2>
+<p>NWB is an effort to standardize data formats for neurophysiology data. It includes several datasets from different labs and modalities, making it a valuable resource for researchers. The Allen Institute for Brain Science, for example, provides NWB datasets.</p>
+<p><a href="https://www.nwb.org/" class="uri">https://www.nwb.org/</a></p>
+<p>This website attached below is an entry point for researchers and developers interested in using NWB.</p>
+<p>To learn about the different tools available to convert your data to NWB</p>
+<p>To publish your NWB data, and visualize and analyze NWB data</p>
+<p>The best tools for programming language and types of data</p>
+<p><a href="https://nwb-overview.readthedocs.io/en/latest/" class="uri">https://nwb-overview.readthedocs.io/en/latest/</a></p>
+</section>
+<section id="human-connectome-project-hcp" class="cell markdown" id="9b-_ywEOPInu">
+<h2>Human Connectome Project (HCP):</h2>
+<p>HCP provides a wealth of neuroimaging and electrophysiological data from a large number of human subjects. This dataset includes resting-state fMRI, task-based fMRI, diffusion MRI, and MEG (magnetoencephalography) data, among others.</p>
+<p><a href="https://www.humanconnectome.org/" class="uri">https://www.humanconnectome.org/</a></p>
+</section>
+<section id="main-new-features-of-hcppipelines" class="cell markdown" id="0POrrXhZWOQN">
+<h2>Main new features of HCPpipelines:</h2>
+<p>Enable custom myelin map template in MSMAll</p>
+<p>TaskfMRIAnalysis to processing such as --lowpassfilter and --procstring, or turning off highpass filtering</p>
+<p>Convert Matlab CIFTI I/O from legacy CIFTI matlab (based on GIFTI objects and wb_command conversions)</p>
+<p>Add VarCopes to converted CIFTI files for TaskfMRIAnalysis</p>
+<p>Support odd numbers of slices in Diffusion Preprocessing</p>
+<p>Change default training file for MR+FIX</p>
+<p>Numerous improvements to example scripts and pipeline instructions</p>
+<p>Full list of changes from 4.3.0 -&gt; 4.7.0 available here</p>
+<p><a href="https://github.com/Washington-University/HCPpipelines/releases" class="uri">https://github.com/Washington-University/HCPpipelines/releases</a></p>
+</section>
+<section id="neural-electromagnetic-ontologies-nemo" class="cell markdown" id="mEfZ39ThPKaX">
+<h2>Neural ElectroMagnetic Ontologies (NEMO):</h2>
+<p>NEMO is a collection of MEG and EEG datasets with standardized annotations. It allows researchers to explore a wide range of cognitive and clinical neuroscience questions.</p>
+<p><a href="https://www.nemods.org/" class="uri">https://www.nemods.org/</a></p>
+</section>
+<section id="neuroscience-information-framework-nif-dataset-search" class="cell markdown" id="jWAnl9tTPNHH">
+<h2>Neuroscience Information Framework (NIF) Dataset Search:</h2>
+<p>The NIF provides a search engine for neuroscience datasets, allowing you to discover and access various datasets related to electrophysiology, neural recordings, and brain research.</p>
+<p><a href="https://data.nif.nih.gov/" class="uri">https://data.nif.nih.gov/</a></p>
+</section>
+<section id="physionet-eeg-databases" class="cell markdown" id="O0yQtzCzPOmZ">
+<h2>PhysioNet EEG Databases:</h2>
+<p>PhysioNet hosts several EEG datasets, including the EEG Motor Movement/Imagery Dataset, which is often used for motor imagery classification and brain-computer interface (BCI) research.</p>
+<p><a href="https://physionet.org/" class="uri">https://physionet.org/</a></p>
+</section>
+<section id="about-physionet" class="cell markdown" id="hHiESHZaVlw7">
+<h3>About PhysioNet:</h3>
+<p><a href="https://physionet.org/about/tutorial/" class="uri">https://physionet.org/about/tutorial/</a></p>
+<p>PhysioBank contains well over 36,000 recordings of annotated, digitized physiologic signals and time series consists of open-source software that can be viewed, analyzed,a modelling physiologic signals and time series, verified, and modified to suit the specific needs of your work.</p>
+</section>
+<section id="an-introduction-to-physiotoolkit" class="cell markdown" id="mO-kUsvkVrY4">
+<h4>An Introduction to PhysioToolkit:</h4>
+<p>Finding records in PhysioBank</p>
+<p>How to obtain PhysioBank data in text form</p>
+<p>Creating PhysioBank (WFDB-compatible) Records and Data Collections</p>
+<p>How to set up a mirror of PhysioNet</p>
+<p>Using the MIMIC II Database</p>
+<p>An Introduction to Cygwin</p>
+<p>Applying PhysioNet tools to manage neurophysiological signals</p>
+<p>RR Intervals, Heart Rate, and HRV Howto</p>
+<p>Heart Rate Variability Analysis with the HRV Toolkit</p>
+<p>Morphology Representation Using Principal Components</p>
+<p>Evaluating ECG Analyzers</p>
+<p>How to Write HTML pages for PhysioNet</p>
+<p>Distributed Computing with PhysioNet data</p>
+</section>
+<section id="data-exploration-and-analysis" class="cell markdown" id="kzSvJXnQVuG0">
+<h4>Data exploration and analysis</h4>
+<p>Variability vs. Complexity</p>
+<p>Exploring Patterns in Nature</p>
+<p>Nonlinear Dynamics, Fractals, and Chaos Theory</p>
+<p>Exploring Human Gait and Heart Rate Dynamics</p>
+<p>Fractal Mechanisms in Neural Control</p>
+<p>A Brief Overview of Multifractal Time Series</p>
+<p>Approximate Entropy (ApEn)</p>
+<p>Multiscale Entropy (MSE) Analysis</p>
+<p>Generalized Multiscale Entropy (GMSE) Analysis</p>
+<p>Information Based Similarity Index</p>
+</section>
+<section id="carmena-lab-monkey-electrocorticography-ecog-dataset" class="cell markdown" id="70dhZdtlPQug">
+<h2>Carmena Lab Monkey Electrocorticography (ECoG) Dataset:</h2>
+<p>This dataset contains ECoG recordings from non-human primates and is used for research in brain-machine interfaces (BMIs) and motor control.</p>
+<p><a href="https://github.com/carmenalab" class="uri">https://github.com/carmenalab</a></p>
+</section>
+<section id="neurotycho-project-dataset" class="cell markdown" id="0eA0tXrpPSNF">
+<h2>NeuroTycho Project Dataset:</h2>
+<p>This dataset includes multichannel ECoG recordings from non-human primates during various tasks and is valuable for studying neural activity and cognitive functions.</p>
+<p><a href="http://wiki.neurotycho.org/Main_Page" class="uri">http://wiki.neurotycho.org/Main_Page</a></p>
+<p><a href="http://neurotycho.org/begins" class="uri">http://neurotycho.org/begins</a></p>
+</section>
+<section id="brain-initiative-cell-census-network-biccn" class="cell markdown" id="dg5oTEFTPTxn">
+<h2>BRAIN Initiative Cell Census Network (BICCN):</h2>
+<p>BICCN provides single-cell RNA sequencing and electrophysiological data for understanding cell types and circuits in the mouse brain.</p>
+<p><a href="https://biccn.org/" class="uri">https://biccn.org/</a></p>
+</section>
+<section id="buzsaki-labs-hippocampal-data" class="cell markdown" id="sgVqCEswPVSt">
+<h2>Buzsaki Lab's Hippocampal Data:</h2>
+<p>Dr. György Buzsáki's lab provides datasets related to hippocampal recordings, which are widely used for the study of memory and spatial navigation.</p>
+<p><a href="https://buzsakilab.com/wp/" class="uri">https://buzsakilab.com/wp/</a></p>
+</section>
+<section id="cochlear-implant-sound-processor-data" class="cell markdown" id="k2SNfUsEPWhK">
+<h2>Cochlear Implant Sound Processor Data:</h2>
+<p>For auditory neuroscience research, datasets related to cochlear implant sound processing and neural responses to auditory stimuli are valuable resources.</p>
+<p><a href="https://www.cochlear.com/us/en/professionals/products-and-candidacy/nucleus/nucleus-reliability" class="uri">https://www.cochlear.com/us/en/professionals/products-and-candidacy/nucleus/nucleus-reliability</a></p>
+</section>
+<div class="cell markdown" id="FbvTBUg0PXym">
+<p>Please note that accessing and using some of these datasets may require permissions and adherence to data usage policies. Additionally, the specific dataset you choose will depend on your research objectives and the type of electrophysiological data you are interested in analyzing. Always ensure that you have the necessary ethical approvals and rights to use any dataset in your research.</p>
+</div>
+
+</div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/slidenumber/slidenumber.js"></script>
+
+<script>
+
+  // Also available as an ES module, see:
+  // https://revealjs.com/initialization/
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    center: true,
+    hash: true,
+            jumpToSlide: false,
+            slideNumber: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+  });
+
+</script>
+
+</body>
+</html>
