@@ -1,6 +1,10 @@
 # Miyjy.github.io
 Study purpose
 
+大規模言語処理モデルGPT-4/LLMについて（第１章）
+
+https://myjmyrk2023.deta.page/qbrrnd
+
 
 What fields are you interested? Please vote here.
 
