@@ -2,7 +2,7 @@
 Study purpose
 
 
-what fields are you interested? Please vote here.
+What fields are you interested? Please vote here.
 
 https://pollster-1-f3090181.deta.app/polls/6j2fAbBOmko4
 
